@@ -27,7 +27,7 @@ body{
             background-attachment: fixed;
             transform-style: preserve-3d;
             transform-origin: top;
-            transform: perspective(3200px) rotateX(0deg) translateY(0);
+            transform: perspective(3200px) rotateX(0deg) translateY(-30);
             transition:  0.4s linear;
         }
         &.flip{
