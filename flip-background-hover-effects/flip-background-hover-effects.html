@@ -34,13 +34,26 @@
         <div></div>
         <div></div>
         <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
         $(document).ready(()=>{
+            var timer;
             $('.container div').mouseover((event)=>{
+                if (timer) {
+                    clearTimeout(timer);
+                }
                 $(event.target).addClass('flip');
+                timer = setTimeout(function() {
+                        $('.container div').removeClass('flip');
+                },2000);
             });
         })
     </script>
