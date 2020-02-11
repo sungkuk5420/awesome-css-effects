@@ -15,9 +15,9 @@
   "homepage": "https://github.com/sungkuk5420/parcel-start-kit#readme",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
-    "node-sass": "^4.10.0",
-    "parcel": "^1.10.3",
-    "parcel-bundler": "^1.10.3",
+    "node-sass": "^4.13.1",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
     "postcss-custom-properties": "^8.0.8",
     "postcss-modules": "^1.4.1"
   },
