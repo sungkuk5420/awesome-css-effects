@@ -18,6 +18,7 @@
     page-break-inside: avoid; /* For Firefox. */
     -webkit-column-break-inside: avoid; /* For Chrome & friends. */
     break-inside: avoid; /* For standard browsers like IE. :-) */
+    border: 1px solid #999999;
 }
 
 .gallery img:hover {
