@@ -1,7 +1,7 @@
 .gallery { 
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
     -webkit-column-gap: 10px;
     -moz-column-gap: 10px;
     column-gap: 10px;
@@ -54,7 +54,19 @@
 .modal-content {
   border: none;
 }
-
+@media screen and (max-width: 1280px) {
+    .gallery { 
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+    .gallery div { margin: 0; 
+        width: 200px;
+    }
+  .modal-dialog {
+        margin: 0 8vw;
+    }
+}
 @media screen and (max-width: 767px) {
     .gallery { 
         -webkit-column-count: 2;
