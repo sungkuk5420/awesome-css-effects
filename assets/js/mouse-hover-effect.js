@@ -28,14 +28,15 @@ const addHoverEventToCursor = linkDom => {
 const cursorInit = ()=>{
   window.addEventListener("mousemove",handleCursorMove);
   if(navLinks){
-    navLinks.forEach(link=>{
+    for (let i = 0; i < navLinks.length; i++) {
+      const link = navLinks[i];
       link.addEventListener("mouseover",()=>{
         addHoverEventToCursor(link);
       });
       link.addEventListener("mouseleave",()=>{
         removeHoverEventToCursor(link);
       });
-    })
+    }
   }
 }
 
