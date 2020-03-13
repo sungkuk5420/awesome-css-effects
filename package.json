@@ -14,7 +14,6 @@
   },
   "homepage": "https://github.com/sungkuk5420/parcel-start-kit#readme",
   "dependencies": {
-    "babel-preset-env": "^1.7.0",
     "node-sass": "^4.13.1",
     "parcel": "^1.12.4",
     "parcel-bundler": "^1.12.4",
@@ -24,10 +23,12 @@
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "babel-core": "^6.26.3",
-    "custom-properties": "^1.0.1"
+    "babel-preset-env": "1.7.0",
+    "custom-properties": "^1.0.1",
+    "sass": "1.26.2"
   },
   "scripts": {
-    "start": "parcel index.html --https --open",
+    "start": "parcel grid-practice.html --https --open",
     "build": "parcel build index.html -d build --public-url ./ "
   }
 }

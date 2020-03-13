@@ -1,0 +1,130 @@
+body {
+  margin: 20px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .logo {
+    font-size: 34px;
+    margin: 10px;
+  }
+  .nav-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    grid-area: span 1 / span 2;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .nav {
+    list-style: none;
+    width: 180px;
+    padding: 0;
+    &__li {
+      &:first-child {
+        text-decoration: underline;
+        margin-bottom: 10px;
+        color: #7b7b7b;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(200px, 1fr);
+  grid-gap: 20px;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 200px;
+    a {
+      color: #7b7b7b;
+      margin-top: auto;
+      font-size: 13px;
+    }
+    &:nth-child(1) {
+      background: #fcf8c0;
+      grid-row: span 2;
+    }
+    &:nth-child(2) {
+      grid-area: span 2 / span 2;
+      background-image: url("../images/grid-practice-1/image-1.jfif");
+      background-size: cover;
+      background-position: center right;
+    }
+    &:nth-child(3) {
+      background: #e5efd9;
+      grid-row: span 1;
+    }
+    &:nth-child(4) {
+      grid-area: span 2 / span 1;
+      background-image: url("../images/grid-practice-1/image-2.jfif");
+      background-size: cover;
+      background-position: center right;
+    }
+    &:nth-child(5) {
+      background: #c4ecf2;
+      grid-area: span 1 / span 1;
+      background-image: url("../images/grid-practice-1/image-3.png");
+      background-size: 80% auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    &:nth-child(6) {
+      background: #ebebeb;
+      grid-row: span 1;
+    }
+    &:nth-child(7) {
+      grid-area: span 1 / span 1;
+      background-image: url("../images/grid-practice-1/image-4.jfif");
+      background-size: cover;
+      background-position: center center;
+    }
+    &:nth-child(8) {
+      height: 100%;
+      width: 100%;
+      background: #fab1a0;
+      grid-area: span 2 / span 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10% 0;
+      box-sizing: border-box;
+      img {
+        width: 80%;
+        height: auto;
+      }
+    }
+    &:nth-child(9) {
+      padding: 0;
+      grid-area: span 2 / span 1;
+      background-image: url("../images/grid-practice-1/image-6.jfif");
+      background-size: cover;
+      background-position: center right;
+    }
+    &:nth-child(10) {
+      grid-area: span 2 / span 2;
+      background-image: url("../images/grid-practice-1/image-7.jfif");
+      background-size: cover;
+      background-position: center right;
+    }
+  }
+  &__label {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    color: #7b7b7b;
+    cursor: pointer;
+  }
+  &__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  &__content {
+    font-size: 14px;
+    color: #404040;
+    margin-bottom: 30px;
+  }
+}
