@@ -1,19 +1,25 @@
+* {
+  font-family: "Lato", sans-serif;
+}
 body {
   margin: 20px;
 }
 
-header {
+header,
+footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "logo nav nav";
+  grid-template-columns: 1fr 1fr 1fr;
   .logo {
     font-size: 34px;
     margin: 10px;
+    grid-area: logo;
   }
   .nav-wrapper {
+    padding-left: 10px;
     display: flex;
     justify-content: flex-start;
-    grid-area: span 1 / span 2;
-    grid-template-columns: repeat(3, 1fr);
+    grid-area: nav;
   }
   .nav {
     list-style: none;
@@ -30,10 +36,32 @@ header {
   }
 }
 
+footer {
+  padding: 50px 0;
+  .nav {
+    width: 220px;
+  }
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(200px, 1fr);
+  grid-template-areas:
+    "column1 column2 column2"
+    "column3 column5 column6"
+    "column4 column5 column7"
+    "column8 column8 column9"
+    "column8 column8 column9"
+    "column10 column10 column11"
+    "column10 column10 column12"
+    "column13 column13 column14"
+    "column13 column13 column15";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:
+    minmax(300px, 1fr) minmax(500px, 1fr) minmax(500px, 1fr) minmax(
+      300px,
+      400px
+    )
+    minmax(300px, 400px) minmax(300px, 400px) minmax(300px, 400px);
   grid-gap: 20px;
   &__box {
     display: flex;
@@ -47,27 +75,27 @@ header {
     }
     &:nth-child(1) {
       background: #fcf8c0;
-      grid-row: span 2;
+      grid-area: column1;
     }
     &:nth-child(2) {
-      grid-area: span 2 / span 2;
       background-image: url("../images/grid-practice-1/image-1.jfif");
       background-size: cover;
       background-position: center right;
+      grid-area: column2;
     }
     &:nth-child(3) {
       background: #e5efd9;
-      grid-row: span 1;
+      grid-area: column3;
     }
     &:nth-child(4) {
-      grid-area: span 2 / span 1;
+      grid-area: column4;
       background-image: url("../images/grid-practice-1/image-2.jfif");
       background-size: cover;
-      background-position: center right;
+      background-position: top -120px right;
     }
     &:nth-child(5) {
+      grid-area: column5;
       background: #c4ecf2;
-      grid-area: span 1 / span 1;
       background-image: url("../images/grid-practice-1/image-3.png");
       background-size: 80% auto;
       background-repeat: no-repeat;
@@ -75,19 +103,19 @@ header {
     }
     &:nth-child(6) {
       background: #ebebeb;
-      grid-row: span 1;
+      grid-area: column6;
     }
     &:nth-child(7) {
-      grid-area: span 1 / span 1;
       background-image: url("../images/grid-practice-1/image-4.jfif");
       background-size: cover;
       background-position: center center;
+      grid-area: column7;
     }
     &:nth-child(8) {
       height: 100%;
       width: 100%;
       background: #fab1a0;
-      grid-area: span 2 / span 2;
+      grid-area: column8;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -100,16 +128,54 @@ header {
     }
     &:nth-child(9) {
       padding: 0;
-      grid-area: span 2 / span 1;
+      grid-area: column9;
       background-image: url("../images/grid-practice-1/image-6.jfif");
       background-size: cover;
       background-position: center right;
     }
     &:nth-child(10) {
-      grid-area: span 2 / span 2;
+      grid-area: column10;
       background-image: url("../images/grid-practice-1/image-7.jfif");
       background-size: cover;
       background-position: center right;
+    }
+    &:nth-child(11) {
+      grid-area: column11;
+      background: #ebebeb;
+    }
+    &:nth-child(12) {
+      grid-area: column12;
+      background-image: url("../images/grid-practice-1/image-8.jfif");
+      background-size: cover;
+      background-position: center right;
+    }
+    &:nth-child(13) {
+      grid-area: column13;
+      background: #e5efd9;
+    }
+    &:nth-child(14) {
+      grid-area: column14;
+      background-image: url("../images/grid-practice-1/image-9.jfif");
+      background-size: cover;
+      background-position: center right;
+    }
+    &:nth-child(15) {
+      grid-area: column15;
+      background-image: url("../images/grid-practice-1/image-10.jfif");
+      background-size: cover;
+      background-position: center right;
+      line-height: 1;
+      span {
+        padding-top: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        height: 4vw;
+        background: white;
+        font-size: 3vw;
+        color: #ffcd01;
+      }
     }
   }
   &__label {
@@ -121,6 +187,12 @@ header {
   &__title {
     font-size: 32px;
     margin-bottom: 20px;
+  }
+  &__sub-title {
+    font-size: 14px;
+    color: #7b7b7b;
+    font-weight: bold;
+    margin-bottom: 5px;
   }
   &__content {
     font-size: 14px;
