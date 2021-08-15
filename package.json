@@ -29,7 +29,7 @@
     "sass": "1.26.2"
   },
   "scripts": {
-    "start": "parcel full-page-scroll-without-javascript.html --https --open",
+    "start": "parcel index.html --https --open",
     "build": "parcel build index.html -d build --public-url ./ "
   }
 }
